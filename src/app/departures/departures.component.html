@@ -1,0 +1,74 @@
+<div id="controls">
+  <span></span>
+</div>
+
+<div id="departures">
+  <ul id="de" class="list-group">
+    <li id="departure-li" class="list-group-item" *ngFor="let departure of departures">
+      <div id="departure-div">
+        <div id="zug"><img src="assets/sbb-zug-icon-2.png" width="1.5%">
+          <strong style="margin: 0 10px">{{departure.category}}{{departure.number}}</strong> Richtung {{departure.to}}
+          <br/>
+        </div>
+        <div id="details" class="container">
+
+          <p class="item"><strong>{{ changeDate(departure.stop.departure) }}</strong></p>
+          <p *ngIf="departure.category == 'B'" class="item">St. {{departure.stop.platform}}
+          <p *ngIf="departure.category != 'B'" class="item">Gl. {{departure.stop.platform}}</p>
+
+          <div class="item" style="display: none; flex-direction: row">
+            <div class="item" id="capacity1st">
+              <div class="container" *ngIf="departure.capacity1st != null">
+                <a>1. </a>
+                <svg class="capacity" id="SBB_utilization_medium" viewBox="0 0 21 18">
+                  <path d="M6 5H1v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="3.5" cy="2.5" r="1.5"></circle>
+                  <path d="M13 5H8v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="10.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M20 5h-5v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="17.5" cy="2.5" r="1.5"></circle>
+                </svg>
+              </div>
+              <div class="container" *ngIf="departure.capacity1st == null">
+                <a>1. </a>
+                <svg class="capacity" id="SBB_utilization_low" viewBox="0 0 21 18">
+                  <path d="M6 5H1v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="3.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M13 5H8v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="10.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M20 5h-5v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="17.5" cy="2.5" r="1.5"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="item" id="capacity2nd">
+              <div class="container" *ngIf="departure.capacity2nd != null">
+                <a>2. </a>
+                <svg class="capacity" id="SBB_utilization_medium" viewBox="0 0 21 18">
+                  <path d="M6 5H1v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="3.5" cy="2.5" r="1.5"></circle>
+                  <path d="M13 5H8v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="10.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M20 5h-5v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="17.5" cy="2.5" r="1.5"></circle>
+                </svg>
+              </div>
+
+              <div class="container" *ngIf="departure.capacity2nd == null">
+                <a>2. </a>
+                <svg class="capacity" id="SBB_utilization_low" viewBox="0 0 21 18">
+                  <path d="M6 5H1v6h1v6h3v-6h1V5z"></path>
+                  <circle cx="3.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M13 5H8v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="10.5" cy="2.5" r="1.5"></circle>
+                  <path fill="#BCBCBC" d="M20 5h-5v6h1v6h3v-6h1V5z"></path>
+                  <circle fill="#BCBCBC" cx="17.5" cy="2.5" r="1.5"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
