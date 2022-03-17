@@ -1,6 +1,7 @@
 {
   "name": "buempliz-departures",
   "version": "0.0.0",
+  "homepage": "http://172.17.22.31/zuege",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/architect": "^0.1302.6",
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
@@ -22,14 +24,14 @@
     "@angular/router": "~12.2.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
+    "firebase": "^9.4.0",
+    "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "firebase": "^9.4.0",
-    "rxfire": "^6.0.0"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.9",
+    "@angular-devkit/build-angular": "^13.2.6",
     "@angular/cli": "~12.2.9",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",
