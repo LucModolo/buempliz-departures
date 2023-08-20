@@ -23,7 +23,7 @@
     "@angular/router": "~13.3.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
-    "firebase": "^9.4.0",
+    "firebase": "^10.2.0",
     "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
